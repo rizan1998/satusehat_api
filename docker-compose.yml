@@ -21,29 +21,29 @@ services:
       - app_name=Satu sehat API
     networks:
       - himed_network
-  satusehat_api_mysql:
-    container_name: satusehat_api_mysql
-    restart: unless-stopped
-    image: mysql:5.7.35
-    ports:
-      - "33500:3306"
-    volumes:
-      - ./docker/mysql:/var/lib/mysql
-    environment:
-      MYSQL_DATABASE: homestead
-      MYSQL_USER: homestead
-      MYSQL_PASSWORD: secret
-      MYSQL_ROOT_PASSWORD: secret
-    networks:
-      - himed_network
-  phpmyadmin_satusehat_api:
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin_satusehat_api
-    restart: always
-    ports:
-      - "9501:80"
-    environment:
-      PMA_ARBITRARY: 1
-      PMA_HOST: mysql
-    networks:
-      - himed_network
+  # satusehat_api_mysql:
+  #   container_name: satusehat_api_mysql
+  #   restart: unless-stopped
+  #   image: mysql:5.7.35
+  #   ports:
+  #     - "33500:3306"
+  #   volumes:
+  #     - ./docker/mysql:/var/lib/mysql
+  #   environment:
+  #     MYSQL_DATABASE: homestead
+  #     MYSQL_USER: homestead
+  #     MYSQL_PASSWORD: secret
+  #     MYSQL_ROOT_PASSWORD: secret
+  #   networks:
+  #     - himed_network
+  # phpmyadmin_satusehat_api:
+  #   image: phpmyadmin/phpmyadmin
+  #   container_name: phpmyadmin_satusehat_api
+  #   restart: always
+  #   ports:
+  #     - "9501:80"
+  #   environment:
+  #     PMA_ARBITRARY: 1
+  #     PMA_HOST: mysql
+  #   networks:
+  #     - himed_network

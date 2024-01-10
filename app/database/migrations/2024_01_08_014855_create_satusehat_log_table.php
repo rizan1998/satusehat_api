@@ -17,8 +17,8 @@ class CreateSatusehatLogTable extends Migration
             $table->string('response_id')->nullable();
             $table->string('action');
             $table->string('url');
-            $table->json('payload')->nullable();
-            $table->json('response');
+            $table->text('payload');
+            $table->text('response');
             $table->string('user_id');
             $table->timestamps();
         });
