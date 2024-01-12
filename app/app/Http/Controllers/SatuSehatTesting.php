@@ -24,9 +24,6 @@ class SatuSehatTesting extends Controller
         $kyc_link = json_decode($json, true);
 
 
-        var_dump($kyc_link);
-        die;
-
         /** 
          * Melakukan route redirect ke link KYC
          * saat ini hanya bisa dibuka pada tab baru / pop-up

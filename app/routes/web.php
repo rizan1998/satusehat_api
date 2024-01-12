@@ -15,7 +15,5 @@ use App\Http\Controllers\{SatuSehatTesting};
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return abort(404);
 });
-
-Route::get('/testing', [SatuSehatTesting::class, 'index']);
